@@ -3,3 +3,11 @@ body {
     color: white;
     font: 16px Tahoma;
 }
+
+table,
+th,
+td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 15px;
+}
