@@ -6,48 +6,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Simulador de Financiamento</title>
         <link rel="stylesheet" href="../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <h2>
             Simulador de Financiamento com Sistema de Amortização Constante
             (SAC)
         </h2>
-        <input type="text" id="textoValor" placeholder="Valor do Bem" /><br />
-        <input
-            type="text"
-            id="textoEntrada"
-            placeholder="Valor da Entrada"
-        /><br />
-        <input
-            type="text"
-            id="textoTaxaJuros"
-            placeholder="Valor de Juros (%)"
-        /><br />
-        <input
-            type="text"
-            id="textoPrazo"
-            placeholder="Prazo (em meses)"
-        /><br />
-        <button id="botaoCalcular">Calcular</button>
-        <input type="checkbox" id="comCarencia" />Com carência?
-        <select id="listaSuspensa" hidden>
-            <option value="2">2 meses</option>
-            <option value="3">3 meses</option>
-            <option value="4">4 meses</option>
-        </select>
-        <br />
-        <table>
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Valor da Parcela</th>
-                    <th>Amortização</th>
-                    <th>Juros</th>
-                    <th>Saldo devedor</th>
-                </tr>
-            </thead>
-            <tbody id="corpoTabela"></tbody>
-        </table>
+        <div id="containerInput">
+            <input type="text" id="textoValor" placeholder="Valor do Bem" />
+            <input
+                type="text"
+                id="textoEntrada"
+                placeholder="Valor da Entrada"
+            />
+            <input
+                type="text"
+                id="textoTaxaJuros"
+                placeholder="Valor de Juros (%)"
+            />
+            <input type="text" id="textoPrazo" placeholder="Prazo (em meses)" />
+        </div>
+        <div id="containerCarencia">
+            <input type="checkbox" id="comCarencia" />Com carência?
+
+            <select id="listaSuspensa" hidden>
+                <option value="2">2 meses</option>
+                <option value="3">3 meses</option>
+                <option value="4">4 meses</option>
+            </select>
+        </div>
+        <div id="containerBotao">
+            <button id="botaoCalcular">Calcular</button>
+        </div>
+        <div id="containerTabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Valor da Parcela</th>
+                        <th>Amortização</th>
+                        <th>Juros</th>
+                        <th>Saldo devedor</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela"></tbody>
+            </table>
+        </div>
         <script type="module" src="../javascript/index.js"></script>
     </body>
 </html>
