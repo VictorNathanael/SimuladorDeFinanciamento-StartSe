@@ -11,7 +11,7 @@ export class Financiamento {
     }
 
     static calcJuros(valor, taxaJuros) {
-        return (valor = taxaJuros / 100);
+        return valor * (taxaJuros / 100);
     }
 
     calcParcelasMensais() {
@@ -40,5 +40,9 @@ export class Financiamento {
                 celula.textContent = dado;
             }
         }
+    }
+
+    getParcelas() {
+        return this.#parcelas;
     }
 }
